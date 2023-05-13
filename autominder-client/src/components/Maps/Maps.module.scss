@@ -1,0 +1,52 @@
+@import "../../variables";
+
+
+.Maps{
+    
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    .fluid{
+        display: flex;
+        width: 100%;
+        align-self: center;
+        
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .Maps{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        object-fit: center;
+
+        .fluid{
+            
+            object-fit: contain;
+            align-self: center;
+            max-width: max-content;
+
+            img{
+                max-width: 30rem;
+            }
+        }
+
+        .fluid-location{
+            object-fit: contain;
+            align-self: center;
+            max-width: max-content;
+
+            img{
+                max-width: 30rem;
+            }
+        }
+    }
+}
