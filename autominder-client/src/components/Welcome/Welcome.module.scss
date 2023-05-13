@@ -5,20 +5,15 @@
     width: 100%;
     min-height: 100vh;
   
-
-  
     display: flex;
     flex-direction: row;
     flex-flow: column wrap;
 
     .section{
         width: 100%;
-        min-height: 90vh;
+        min-height: 100vh;
     
         border-bottom: $--gray 0.01rem solid;
-
-        gap: 1rem;
-
 
         display: flex;
         flex-direction: row;
@@ -26,7 +21,7 @@
         justify-content: center;
         
         align-items: center;
-        gap: 1rem;
+        
 
         .fluid {
             width: 100%;
@@ -84,9 +79,80 @@
                 color: $--black;
   
             }
+
+            .Button{
+
+                display: inline-block;
+                
+                border-radius: 1.5rem;
+                
+                margin-top: 1rem;
+                margin-right: 1rem;
+            
+                min-width: 8rem;
+                min-height: 3rem;
+            
+                color: $--white;
+        
+                background-color: $--main-blue;
+        
+                text-align: center;
+                font-size: 1.25rem;
+        
+            
+            }
+        
+            .Button:hover{
+                
+                background-color: $--light-blue;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+        
+                
+            }
+        
+            
+            .Button-out{
+        
+                display: inline-block;
+                
+                border-radius: 1.5rem;
+                border-style: none;
+        
+                margin-right: 1rem;
+            
+                min-width: 8rem;
+                min-height: 3rem;
+            
+                color: $--white;
+        
+                background-color: $--main-blue;
+        
+                text-align: center;
+        
+            
+            }
+        
+            .Button-out:hover{
+                
+                background-color: $--light-blue;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                
+            }
         }
           
 
 
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .Header{ 
+        min-height: 70vh;
+        .section{
+            min-height: 70vh;
+        }
     }
 }

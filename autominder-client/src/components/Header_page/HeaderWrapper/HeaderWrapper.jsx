@@ -10,7 +10,7 @@ import { useUserConext } from '../../../contexts/UserContext';
 function Navbar({open}) {
 
   const navigate = useNavigate();
-  const {logout, user} = useUserConext();
+  const {logout, user, close} = useUserConext();
 
   return (
 
@@ -22,18 +22,19 @@ function Navbar({open}) {
         !user ?
 
         <>
-        <a href="#"  onClick = { () => navigate("/")}> Mi perfil</a>
-        <a href="#" onClick = { () => navigate("/")} >Descrubrir y Denunciar </a>
-        <a href="#" onClick = { () => navigate("/")} > Mapa</a>
-        <a href="#" onClick = { () => navigate("/")} > About us</a>
+        <a href="#"  onClick = { () => { navigate("/")}}> Mi perfil</a>
+        <a href="#" onClick = { () => { navigate("/")}} >Acerca de la aplicación </a>
+        <a href="#" onClick = { () => { navigate("/aboutus")}} > Conoce sobre los desarrolladores</a>
 
         </>:
 
         <>
-          <a href="#"  onClick = { () => navigate("/user_profile")}> Mi perfil</a>
-          <a href="#" onClick = { () => navigate("/Feed")} >Descrubrir y Denunciar </a>
-          <a href="#" onClick = { () => navigate("/Maps")} > Mapa</a>
-          <a href="#" onClick = { () => navigate("/aboutus")} > About us</a>
+          <a href="#"  onClick = { () => navigate("/")}> Mi perfil</a>
+        <a href="#" onClick = { () => navigate("/")} >Acerca de la aplicación </a>
+        <a href="#" onClick = { () => navigate("/aboutus")} > Conoce sobre los desarrolladores</a>
+        <a href="#" onClick = { () => navigate("/aboutus")} > Administrar usurios</a>
+
+
         </>
       }
 
@@ -42,7 +43,7 @@ function Navbar({open}) {
         !user ?
         <>
         
-        <a href="#" onClick = { () => navigate("/auth/signup")} > Sign up</a>
+        
         <a href="#" onClick = { () => navigate("/auth/signin")} > Sign in</a>
         </>:
 

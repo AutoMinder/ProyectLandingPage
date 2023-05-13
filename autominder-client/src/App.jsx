@@ -36,7 +36,6 @@ function App() {
         <Routes>
 
           <Route index element={<Welcome/>}/>
-          <Route path="Feed" element={<Feed_v2/>}/>
           <Route path="aboutus" element={<Aboutus/>}/>
           <Route path="contactus" element={<ContactUs/>}/>
           <Route path="user_profile" element={<User_profile/>}/>

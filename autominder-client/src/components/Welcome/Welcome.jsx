@@ -3,7 +3,8 @@ import classes from './Welcome.module.scss'
 import welcomeIm1 from '../../assets/img/welcomeImg1.png';
 import welcomeIm2 from '../../assets/img/20618.jpg';
 import welcomeIm3 from '../../assets/img/MEC3.png';
-import welcomeIm4 from '../../assets/img/taller.png';
+import welcomeIm4 from '../../assets/img/carseervice.png';
+import Button2 from '../Button/Button';
 
 
 const Welcome = () => { 
@@ -16,8 +17,12 @@ const Welcome = () => {
                         
                     <p>
                     Acceder a información importante del vehículo mediante la lectura de la computadora de
-viaje por medio del puerto OBD.
+                    viaje por medio del puerto OBD.
                     </p>
+
+                    <Button2 className={classes['Button']}>
+                        Descarga ahora
+                    </Button2>
                 </div>
                         
         
@@ -42,6 +47,7 @@ viaje por medio del puerto OBD.
                         las herramientas esenciales para que mantengas tu carro en excelentes 
                         condiciones, todo en un solo lugar.
                     </p>
+
                 </div>
                         
 

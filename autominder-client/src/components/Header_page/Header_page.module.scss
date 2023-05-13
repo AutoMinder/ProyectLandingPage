@@ -202,12 +202,9 @@
     .Header{
 
         justify-content: space-between;
-        padding: 1rem;
-
+    
         .Hamburger{
             display: none;
-
-            margin-right: 1rem;
             cursor: pointer;
             
         }
@@ -217,13 +214,13 @@
         }
         
         .logo{
-            display: inline-block;
+            
             object-fit: contain;
-            height: fit-content;
-    
+        
             img{
-                height: 7rem;
-                width: 7rem;
+                
+                height: 6rem;
+                width: 6rem;
             }
         }
 
