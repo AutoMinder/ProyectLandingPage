@@ -39,6 +39,7 @@ function App() {
           <Route path="aboutus" element={<Aboutus/>}/>
           <Route path="contactus" element={<ContactUs/>}/>
           <Route path="user_profile" element={<User_profile/>}/>
+          <Route path="feed" element={<Feed_v2/>}/>
           <Route path="maps" element={<Maps/>}/>
           <Route path="*" element={<NotFoundView_v2/>}/>
 

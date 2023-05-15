@@ -57,21 +57,33 @@
 
                 
                 margin: 1rem 0;
-
+                font-family: "Montserrat", sans-serif;
                 color: black;
                 font-size: 2.5em;
                 font-weight: 700;
-                font: "Montserrat";
+
+            
+
+            
                 
             }
 
             p{
                 width: 100%;
+                font-family: "Montserrat", sans-serif;
                 max-width: 1000px;
                 margin: 1rem 0;
                 text-align: justify;
                 font-size: 1.5em;
                 color: black;
+
+                &:hover, 
+                &:focus{
+                    font-weight: 800;
+                    transition: all ease-in-out 250ms;
+                    color: $--main-blue;
+                    transform: scale(1.05);
+                }
   
             }
         }
@@ -92,7 +104,9 @@
                 font-size: 2.5em;
                 font-weight: 700;
                 text-align: left;
-                font: "Montserrat";
+                font-family: "Montserrat", sans-serif;
+
+            
             }
 
             p{
@@ -100,11 +114,20 @@
                 max-width: 1000px;
                 text-align: justify;
                 margin: 1rem 0;
-            
+                font-family: "Montserrat", sans-serif;
                 font-size: 1.5em;
                 color: black;
   
+                &:hover, 
+                &:focus{
+                    font-weight: 800;
+                    transition: all ease-in-out 250ms;
+                    color: $--main-blue;
+                    transform: scale(1.05);
+                }
             }
+
+            
         }
 
         .container{
@@ -145,10 +168,11 @@
     
               transition: all 0.75s ease-in-out;
     
-              background-color: $--main-blue;
+              background-color: $--dark-blue;
     
               &:hover{
-                transform: scale(1.02);
+                background-color: $--main-blue;
+                transform: scale(1.10);
                 cursor: pointer;
               }
     

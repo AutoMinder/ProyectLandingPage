@@ -64,6 +64,10 @@ const Header = () => {
                 <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
                     Guía de uso
                 </p>
+
+                <p className = {classes['Elements']} onClick = { () => navigate("/feed")}>
+                    Administrar usuarios
+                </p>
                 
                 <div className = {classes['Elements']} onClick = { () => navigate("/")}>
 
@@ -97,6 +101,8 @@ const Header = () => {
                 <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
                     Administrar usuarios
                 </p>
+
+                
                 
                 <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
 

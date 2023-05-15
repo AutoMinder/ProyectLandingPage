@@ -2,31 +2,39 @@
 
 
 .Maps{
-    
+   
     display: flex;
-    flex-direction: column;
-    flex-flow: column;
-
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 4rem;
+    padding: 3rem;
 
     .fluid{
+        margin: 0.5rem;
+        margin-bottom: 0.75rem;
         display: flex;
-        width: 100%;
-        align-self: center;
+        flex-direction: row;
+
+        &:hover,
+        &:focus {
+            transition: all ease-in-out 250ms;
+            transform: scale(1.05);
+        }
         
     }
+
 }
 
 
 @media screen and (max-width: 768px){
     .Maps{
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
         object-fit: center;
+        margin-left: 1rem;
+        padding: 2rem;
 
         .fluid{
             
@@ -37,6 +45,8 @@
             img{
                 max-width: 30rem;
             }
+
+
         }
 
         .fluid-location{

@@ -79,91 +79,12 @@ const FeedView = () => {
     return(
         <div className={classes["news-publish"]}>
             <div className={classes["feed-wrapper"]}>
-
-                    {/* Formulario de creacion*/}
-                    <div className={classes["center"]}>
-                        { user && <NewPostForm onAddPost={onAddPostHandler} />}
-                    </div>
-                    
-
+        
                     {/* Lista de posts - Main Feed - Muestra de elementos */}
                     <Post posts={posts}/>
             </div>
 
-            <div className={classes["news"]}>
-                <h3>
-                    Noticias
-                </h3>
-                <div className={classes['section']}>
-
-                    <div className={classes['container']}>
-                        <div className={classes['team-card']}>
-
-                            <p>
-                            <b>Conversatorio virtual: </b>“Prospectiva y planificación en la era de la inteligencia 
-                            artificial en América Latina y el Caribe. ¿Cómo salir del entrampamiento?”
-                            </p>
-                        
-                        </div>
-                    </div>
-
-                    <div className={classes['container']}>
-                        <div className={classes['team-card']}>
-
-                        <p>
-                        Estudio sobre edificios de cero energía neta gana premio en investigación científica22/10/2019Academia
-
-                        </p>
-
-                        </div>
-                    </div>
-
-                    <div className={classes['container']}>
-                        <div className={classes['team-card']}>
-
-                        <p>
-                        Octava entrega de becas a la excelencia06/01/2021    
-                        </p>
-
-                        </div>
-                    </div>
-
-                    <div className={classes['container']}>
-                        <div className={classes['team-card']}>
-
-                        <p>
-                        Mirada estructural a la situación socioeconómica salvadoreña08/10/2019
-                        </p>
-
-                        </div>
-                    </div>
-
-                    <div className={classes['container']}>
-                        <div className={classes['team-card']}>
-
-                        <p>
-                        Radio YSUCA
-                        Se mantienen al alza los precios en los productos de la canasta básica
-                        21/11/2022
-                        </p>
-
-                        </div>
-                    </div>
-
-                    <div className={classes['container']}>
-                        <div className={classes['team-card']}>
-
-                        <p>
-                        Estudiantes UCA obtienen primer 
-                        lugar en concurso de audiencias temáticas ante la CIDH23/09/2022 | 
-                        </p>
-
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+           
         </div>
     )
 }
