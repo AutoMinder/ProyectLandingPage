@@ -48,6 +48,12 @@
                 border-radius: 2rem;
                 border-style:groove;
                 border-color: black;
+
+                &:hover,
+                &:focus {
+                    transition: all ease-in-out 250ms;
+                    transform: scale(1.05);
+                }
             }
 
         }

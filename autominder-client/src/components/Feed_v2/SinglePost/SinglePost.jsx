@@ -23,13 +23,150 @@ const SinglePost = ({title='', description='', image='', user='' }) => {
 
 
     return(
-         
+
+        <div className={classes['row']}>
+
+        <article className={classes['post']}>
+            <a>
+                Alejandro
+            </a>
+            
+            <div className={classes['actions']}>
+            
+
+                <div>
+                    <AiFillCloseCircle /> Eliminar usuario
+                </div>
+                    
+                <div>
+                    <BsTrash /> Eliminar carros creados
+                </div>
+
+                
+            </div>
+
+        </article>
+
+        <article className={classes['post']}>
+            <a>
+                Alejandro
+            </a>
+            
+            <div className={classes['actions']}>
+            
+
+                <div>
+                    <AiFillCloseCircle /> Eliminar usuario
+                </div>
+                    
+                <div>
+                    <BsTrash /> Eliminar carros creados
+                </div>
+
+                
+            </div>
+
+        </article>
+
+        <article className={classes['post']}>
+            <a>
+                Alejandro
+            </a>
+            
+            <div className={classes['actions']}>
+            
+
+                <div>
+                    <AiFillCloseCircle /> Eliminar usuario
+                </div>
+                    
+                <div>
+                    <BsTrash /> Eliminar carros creados
+                </div>
+
+                
+            </div>
+
+        </article>
+
+        <article className={classes['post']}>
+            <a>
+                Alejandro
+            </a>
+            
+            <div className={classes['actions']}>
+            
+
+                <div>
+                    <AiFillCloseCircle /> Eliminar usuario
+                </div>
+                    
+                <div>
+                    <BsTrash /> Eliminar carros creados
+                </div>
+
+                
+            </div>
+
+        </article>
+
+        <article className={classes['post']}>
+            <a>
+                Alejandro
+            </a>
+            
+            <div className={classes['actions']}>
+            
+
+                <div>
+                    <AiFillCloseCircle /> Eliminar usuario
+                </div>
+                    
+                <div>
+                    <BsTrash /> Eliminar carros creados
+                </div>
+
+                
+            </div>
+
+        </article>
+
+        <article className={classes['post']}>
+            <a>
+                Alejandro
+            </a>
+            
+            <div className={classes['actions']}>
+            
+
+                <div>
+                    <AiFillCloseCircle /> Eliminar usuario
+                </div>
+                    
+                <div>
+                    <BsTrash /> Eliminar carros creados
+                </div>
+
+                
+            </div>
+
+        </article>
+
+        </div>
+
         
 
+        
+         
+
+        
+        
+        /*
         <article className={classes['post']}>
 
             <a>
                 {user}
+                
                 
             </a>
 
@@ -95,6 +232,8 @@ const SinglePost = ({title='', description='', image='', user='' }) => {
             </textarea>
 
         </article>
+
+        */
 
         
     )

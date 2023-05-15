@@ -14,11 +14,12 @@
         border-radius: 0.5rem;
      
         cursor: pointer;
-        transition: all ease-in-out 250ms;
+       
      
         &:hover,
         &:focus {
-          transform: scale(1.05);
+          transition: all ease-in-out 250ms;
+          transform: scale(1.20);
         }
 
         &:disabled{

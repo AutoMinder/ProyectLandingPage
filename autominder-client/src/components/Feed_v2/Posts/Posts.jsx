@@ -22,12 +22,16 @@ const Post = ({posts = []}) => {
     return (
         <section className={classes["feed-posts-section"]}>
             <h3>
-                ¡Mira las nuevas publicaciones!
+                Administrar usuarios
             </h3>
 
+            
             <div className={classes["posts"]}>
-                {mappedPosts}
+                <SinglePost/>                
             </div>
+            
+
+        
         </section>
     );
 };
