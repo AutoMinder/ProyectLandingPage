@@ -90,6 +90,10 @@ const Header = () => {
                 Conoce sobre los desarrolladores
                 </p>
 
+                <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
+                    Guía de uso
+                </p>
+
                 <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
                     Administrar usuarios
                 </p>
@@ -108,6 +112,10 @@ const Header = () => {
                 <>
                 <Button2 className={classes['Button']} onClick = { () => navigate("/auth/signin")}>
                     Sign in
+                </Button2>
+
+                <Button2 className={classes['Button']} onClick = { () => navigate("/auth/signup")}>
+                    Sign up
                 </Button2>
 
         
