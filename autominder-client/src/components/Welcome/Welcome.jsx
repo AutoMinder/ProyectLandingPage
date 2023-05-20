@@ -8,6 +8,8 @@ import Button2 from '../Button/Button';
 
 
 const Welcome = () => { 
+
+
     return(
         <div className={classes['Welcome']}>
             <div className={classes['section']}>
