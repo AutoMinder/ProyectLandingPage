@@ -1,0 +1,62 @@
+@import "../../variables";
+
+
+.Maps{
+   
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 4rem;
+    padding: 3rem;
+
+    .fluid{
+        margin: 0.5rem;
+        margin-bottom: 0.75rem;
+        display: flex;
+        flex-direction: row;
+
+        &:hover,
+        &:focus {
+            transition: all ease-in-out 250ms;
+            transform: scale(1.05);
+        }
+        
+    }
+
+}
+
+
+@media screen and (max-width: 768px){
+    .Maps{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        object-fit: center;
+        margin-left: 1rem;
+        padding: 2rem;
+
+        .fluid{
+            
+            object-fit: contain;
+            align-self: center;
+            max-width: max-content;
+
+            img{
+                max-width: 30rem;
+            }
+
+
+        }
+
+        .fluid-location{
+            object-fit: contain;
+            align-self: center;
+            max-width: max-content;
+
+            img{
+                max-width: 30rem;
+            }
+        }
+    }
+}

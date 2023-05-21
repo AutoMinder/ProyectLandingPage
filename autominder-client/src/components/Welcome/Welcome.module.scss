@@ -1,0 +1,164 @@
+@import "../../variables";
+
+.Welcome{
+
+    width: 100%;
+    min-height: 100vh;
+  
+    display: flex;
+    flex-direction: row;
+    flex-flow: column wrap;
+
+    .section{
+        width: 100%;
+        min-height: 100vh;
+    
+        border-bottom: $--gray 0.01rem solid;
+
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        justify-content: center;
+        
+        align-items: center;
+        
+
+        .fluid {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            
+        }
+
+        figure{
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            
+
+            object-fit: contain;
+            min-width: 450px; 
+
+            img{
+
+                max-width: 35rem;
+                border-radius: 2rem;
+                border-style:groove;
+                border-color: black;
+
+                &:hover,
+                &:focus {
+                    transition: all ease-in-out 250ms;
+                    transform: scale(1.05);
+                }
+            }
+
+        }
+
+        .centered-quote {
+            padding: 1rem;
+  
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        
+            text-align: center;
+
+            h1, h3{
+                margin: 1rem 0;
+                
+                color: $--black;
+                font-size: 2.5em;
+                font-weight: 900;
+            }
+
+            p{
+                width: 100%;
+                max-width: 900px;
+                margin: 1rem 0;
+                text-align: center;
+                font-size: 1.35rem;
+                color: $--black;
+  
+            }
+
+            .Button{
+
+                display: inline-block;
+                
+                border-radius: 1.5rem;
+                
+                margin-top: 1rem;
+                margin-right: 1rem;
+            
+                min-width: 8rem;
+                min-height: 3rem;
+            
+                color: $--white;
+        
+                background-color: $--main-blue;
+        
+                text-align: center;
+                font-size: 1.25rem;
+        
+            
+            }
+        
+            .Button:hover{
+                
+                background-color: $--light-blue;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+        
+                
+            }
+        
+            
+            .Button-out{
+        
+                display: inline-block;
+                
+                border-radius: 1.5rem;
+                border-style: none;
+        
+                margin-right: 1rem;
+            
+                min-width: 8rem;
+                min-height: 3rem;
+            
+                color: $--white;
+        
+                background-color: $--main-blue;
+        
+                text-align: center;
+        
+            
+            }
+        
+            .Button-out:hover{
+                
+                background-color: $--light-blue;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+                
+            }
+        }
+          
+
+
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .Header{ 
+        min-height: 70vh;
+        .section{
+            min-height: 70vh;
+        }
+    }
+}

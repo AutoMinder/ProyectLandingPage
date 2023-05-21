@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------------------------------------------ */
+/* Posts.module.scss */
+ 
+@import "./../../../variables";
+ 
+.feed-posts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+ 
+  h3 {
+    padding: 1rem;
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    color: $--black;
+    text-align: center;
+  }
+
+  .posts {
+    display: flex;
+    gap: 0.5rem;    
+  }
+ 
+  
+}
+ 
