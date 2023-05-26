@@ -10,7 +10,7 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 
 
 
-const SinglePost = ({title='', description='', image='', user='' }) => {
+const SinglePost = ({car_name='', user='', roles='' }) => {
 
 
     // tambien
@@ -26,131 +26,42 @@ const SinglePost = ({title='', description='', image='', user='' }) => {
 
         <div className={classes['row']}>
 
+        
+
+
         <article className={classes['post']}>
             <a>
-                Alejandro
+               {car_name}
             </a>
+
+            <h4>
+                {user}
+            </h4>
             
             <div className={classes['actions']}>
+                {
+                    roles == 'admin'?
+                    <>
+                        <div>
+                            <AiFillCloseCircle /> Eliminar usuario
+                        </div>
+                        
+                        <div>
+                            <BsTrash /> Eliminar carro
+                        </div>
+                    </>:
+                    <>
+                        <div>
+                            <BsTrash /> Eliminar carro
+                        </div>
+                    </>
+                }
             
-
-                <div>
-                    <AiFillCloseCircle /> Eliminar usuario
-                </div>
-                    
-                <div>
-                    <BsTrash /> Eliminar carros creados
-                </div>
-
-                
             </div>
 
         </article>
 
-        <article className={classes['post']}>
-            <a>
-                Alejandro
-            </a>
-            
-            <div className={classes['actions']}>
-            
-
-                <div>
-                    <AiFillCloseCircle /> Eliminar usuario
-                </div>
-                    
-                <div>
-                    <BsTrash /> Eliminar carros creados
-                </div>
-
-                
-            </div>
-
-        </article>
-
-        <article className={classes['post']}>
-            <a>
-                Alejandro
-            </a>
-            
-            <div className={classes['actions']}>
-            
-
-                <div>
-                    <AiFillCloseCircle /> Eliminar usuario
-                </div>
-                    
-                <div>
-                    <BsTrash /> Eliminar carros creados
-                </div>
-
-                
-            </div>
-
-        </article>
-
-        <article className={classes['post']}>
-            <a>
-                Alejandro
-            </a>
-            
-            <div className={classes['actions']}>
-            
-
-                <div>
-                    <AiFillCloseCircle /> Eliminar usuario
-                </div>
-                    
-                <div>
-                    <BsTrash /> Eliminar carros creados
-                </div>
-
-                
-            </div>
-
-        </article>
-
-        <article className={classes['post']}>
-            <a>
-                Alejandro
-            </a>
-            
-            <div className={classes['actions']}>
-            
-
-                <div>
-                    <AiFillCloseCircle /> Eliminar usuario
-                </div>
-                    
-                <div>
-                    <BsTrash /> Eliminar carros creados
-                </div>
-
-                
-            </div>
-
-        </article>
-
-        <article className={classes['post']}>
-            <a>
-                Alejandro
-            </a>
-            
-            <div className={classes['actions']}>
-            
-
-                <div>
-                    <AiFillCloseCircle /> Eliminar usuario
-                </div>
-                    
-                <div>
-                    <BsTrash /> Eliminar carros creados
-                </div>
-
-                
-            </div>
-
-        </article>
+       
 
         </div>
 
