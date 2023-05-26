@@ -33,10 +33,7 @@ const User_profile = () => {
                         <h2>Correo</h2>
                         <p> {user.email}  </p>
                     </div> 
-                    <div>
-                        <h2>Descripcion </h2>
-                        <p> {user.description} </p>
-                    </div> 
+                  
                     </>
 
 
@@ -56,7 +53,7 @@ const User_profile = () => {
                                 <img src={userImg} alt="user" />
                             </figure>
 
-                            <h1> Modificar foto de perfil </h1>
+                            
 
                         </div>
                     </div>
