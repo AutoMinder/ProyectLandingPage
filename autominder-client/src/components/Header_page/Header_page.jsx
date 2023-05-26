@@ -65,9 +65,7 @@ const Header = () => {
                     Guía de uso
                 </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/feed")}>
-                    Administrar usuarios
-                </p>
+                
                 
                 <div className = {classes['Elements']} onClick = { () => navigate("/")}>
 
@@ -98,8 +96,8 @@ const Header = () => {
                     Guía de uso
                 </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
-                    Administrar usuarios
+                <p className = {classes['Elements']} onClick = { () => navigate("/feed")}>
+                    Administrar carros de la cuenta
                 </p>
 
                 

@@ -11,10 +11,10 @@ const Post = ({posts = []}) => {
         return(
             <SinglePost
                 key={post._id}
-                title = {post.title}
-                description = {post.description}
+                car_name= {post.car_name}
                 user = {post.user.username} 
-                image = {post.image}
+                rol = {post.user.roles}
+                
             />
         );
     });
@@ -27,7 +27,7 @@ const Post = ({posts = []}) => {
 
             
             <div className={classes["posts"]}>
-                <SinglePost/>                
+                {mappedPosts}                
             </div>
             
 
