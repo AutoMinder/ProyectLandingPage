@@ -79,10 +79,10 @@
 
                 &:hover, 
                 &:focus{
-                    font-weight: 800;
+                   
                     transition: all ease-in-out 250ms;
                     color: $--main-blue;
-                    transform: scale(1.05);
+                    
                 }
   
             }
@@ -120,10 +120,10 @@
   
                 &:hover, 
                 &:focus{
-                    font-weight: 800;
+                  
                     transition: all ease-in-out 250ms;
                     color: $--main-blue;
-                    transform: scale(1.05);
+                    
                 }
             }
 

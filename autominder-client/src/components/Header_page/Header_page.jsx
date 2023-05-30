@@ -67,7 +67,7 @@ const Header = () => {
 
                 
                 
-                <div className = {classes['Elements']} onClick = { () => navigate("/")}>
+                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
 
                 
                     <figure className={classes['Icon-user']}>
@@ -96,10 +96,13 @@ const Header = () => {
                     Guía de uso
                 </p>
 
+          
                 <p className = {classes['Elements']} onClick = { () => navigate("/feed")}>
                     Administrar carros de la cuenta
                 </p>
+             
 
+        
                 
                 
                 <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>

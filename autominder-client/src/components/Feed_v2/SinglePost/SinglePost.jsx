@@ -2,68 +2,49 @@ import classes from './SinglePost.module.scss';
 import {BsFillChatRightTextFill} from 'react-icons/bs';
 import {BsFillCheckCircleFill} from 'react-icons/bs';
 import { useUserConext } from '../../../contexts/UserContext';
-
+import Button from '../../Button/Button';
 import { BsTrash } from 'react-icons/bs';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { toast } from 'react-toastify';
 
 
 
 
 
-const SinglePost = ({car_name='', user='', roles='' }) => {
+const SinglePost = ({id='', car_name='', user='', onDeletePost = () => {}}) => {
 
 
-    // tambien
-    // const {title, description, image} = props;
-    
-    //tambien
-    //const title = props.title;
-    //const description = props.description;
-    //const image = props.image;
+
+    const onSubmitDelete = (event) => {
+        event.preventDefault();
+
+        onDeletePost({id});
+
+    }
 
 
     return(
 
-        <div className={classes['row']}>
+        <form className={classes['row']} onSubmit={onSubmitDelete}>
+            <article className={classes['post']}>
+                <a>
+                    {car_name}
+                </a>
 
-        
+                <h4>
+                    {user}
+                </h4>
+                    
+                <div className={classes['actions']}>
+                    <Button type="submit"> 
+                        <BsTrash /> Eliminar carro
+                    </Button>
+                  
+                </div>
 
+            </article>
 
-        <article className={classes['post']}>
-            <a>
-               {car_name}
-            </a>
-
-            <h4>
-                {user}
-            </h4>
-            
-            <div className={classes['actions']}>
-                {
-                    roles == 'admin'?
-                    <>
-                        <div>
-                            <AiFillCloseCircle /> Eliminar usuario
-                        </div>
-                        
-                        <div>
-                            <BsTrash /> Eliminar carro
-                        </div>
-                    </>:
-                    <>
-                        <div>
-                            <BsTrash /> Eliminar carro
-                        </div>
-                    </>
-                }
-            
-            </div>
-
-        </article>
-
-       
-
-        </div>
+        </form>
 
         
 
