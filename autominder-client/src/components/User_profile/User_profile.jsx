@@ -19,25 +19,30 @@ const User_profile = () => {
 
                     { !user ? 
 
-                    <>
-                        <h2>No autorizado </h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-                    </>:
-                    <> 
-                    <h3>Mi perfil</h3>
-                    <div>
-                        <h2>Nombre completo</h2>
-                        <p>  {user.username}</p>
-                    </div>  
-                    <div>
-                        <h2>Correo</h2>
-                        <p> {user.email}  </p>
-                    </div> 
-                  
-                    </>
+                        <>
+                            <h2>No autorizado </h2>
+                            <p>Realiza "Sign In para visualizar información de tu cuenta" </p>
+                        </>:
+                        <> 
+                        <h3>Mi perfil</h3>
+                        <div>
+                            <h2>Nombre usuario</h2>
+                            <p>  {user.username}</p>
+                        </div>  
+                        <div>
+                            <h2>Correo</h2>
+                            <p> {user.email}  </p>
+                        </div> 
+
+                        <div>
+                            <h2>Tipo de usuario dentro del sistema</h2>
+                            <p> Uusuario tipo: "{user.roles}" </p>
+                        </div>
+                    
+                        </>
 
 
-                        }
+                    }
                     </div>
 
                 </div> 

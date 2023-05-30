@@ -67,7 +67,7 @@ const Header = () => {
 
                 
                 
-                <div className = {classes['Elements']} onClick = { () => navigate("/")}>
+                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
 
                 
                     <figure className={classes['Icon-user']}>

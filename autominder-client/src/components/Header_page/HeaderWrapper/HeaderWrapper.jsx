@@ -25,6 +25,7 @@ function Navbar({open}) {
         <a href="#"  onClick = { () => { navigate("/")}}> Mi perfil</a>
         <a href="#" onClick = { () => { navigate("/")}} >Acerca de la aplicación </a>
         <a href="#" onClick = { () => { navigate("/aboutus")}} > Conoce sobre los desarrolladores</a>
+        <a href="#"  onClick = { () => { navigate("/user_profile")}}> Mi perfil</a>
         <a href="#"  onClick = { () => { navigate("/maps")}}> Guia de usuario</a>
         
 

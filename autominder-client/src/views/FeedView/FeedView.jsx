@@ -108,7 +108,7 @@ const FeedView = () => {
     return(
         <div className={classes["news-publish"]}>
             {
-                user.roles == 'user'?
+                user.roles == 'admin'?
                 <>  
                     {/* Post de los carros con el boton eliminar */}
                     <div className={classes["feed-wrapper"]}>
