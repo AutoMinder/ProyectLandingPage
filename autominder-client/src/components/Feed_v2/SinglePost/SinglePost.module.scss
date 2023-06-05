@@ -49,13 +49,38 @@
       text-align: center;
       font-weight: 700;
     }
-  
+
     h4 {
       font-size: 2rem;
       color: $--black;
       font-family: "Montserrat", sans-serif;
       text-align: center;
       font-weight: 700;
+    }
+  
+    h5 {
+      font-size: 2rem;
+      color: $--black;
+      font-family: "Montserrat", sans-serif;
+      text-align: center;
+      font-weight: 700;
+
+      .NoDele{
+        font-size: 2rem;
+        color: green;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-weight: 700;
+      }
+
+      .Dele{
+        font-size: 2rem;
+        color: red;
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-weight: 700;
+      }
+
     }
   
     p {

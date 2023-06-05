@@ -52,29 +52,36 @@ const Post = ({posts = []}) => {
     
     
     const mappedPosts = posts.map(post => {
-        return(
-            <SinglePost
-                key={post._id}
-                id={post._id}
-                car_name= {post.car_name}
-                user = {post.user.username} 
-                onDeletePost={onDeletePostHandler}
-            />
-        );
+            return(
+                <SinglePost
+                    key={post._id}
+                    id={post._id}
+                    car_name= {post.car_name}
+                    user = {post.user.username} 
+                    state = {post.hidden}
+                    onDeletePost={onDeletePostHandler}
+                />
+            );
+        
     });
+
+    
 
     return (
         <section className={classes["feed-posts-section"]}>
+
+            
             <h3>
-                Administrar usuarios
+                Administrar registros
             </h3>
+
 
             
             <div className={classes["posts"]}>
                 {mappedPosts}                
             </div>
-            
 
+        
         
         </section>
     );
