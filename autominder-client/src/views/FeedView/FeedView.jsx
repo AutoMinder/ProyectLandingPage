@@ -19,11 +19,14 @@ import { useUserConext } from "../../contexts/UserContext";
 
 const FeedView = () => {
     const [posts, setPosts] = useState([]);
+    const [postsHidden, setPostsHidden] = useState([]);
     const {startLoading, stopLoading} = useConfigContext();
     const {token, user} = useUserConext();
 
 
     useEffect(() => {fetchPosts()}, []);
+    useEffect(() => {fetchPostsHidden()}, []);
+    
 
     const fetchPosts = async () => {
         try{
@@ -32,8 +35,8 @@ const FeedView = () => {
 
             const {data} = await axios.get('/post');
             setPosts(data.posts);
-
-
+            
+    
         }catch(error){
             toast.error('Error fetching posts');
         }finally{
@@ -41,6 +44,25 @@ const FeedView = () => {
         }
 
     }
+
+    const fetchPostsHidden = async () => {
+        try{
+
+            startLoading();
+
+            const {data} = await axios.get('/post/hidden');
+            setPostsHidden(data.posts);
+            
+    
+        }catch(error){
+            toast.error('Error fetching posts');
+        }finally{
+            stopLoading();
+        }
+
+    }
+
+    
 
     const savePost = async (title, description, image) => {
         try{
@@ -92,17 +114,7 @@ const FeedView = () => {
 
     }
 
-    const onDeletePostHandler = async (id) => {
-        await deletePost(id);
-        fetchPosts();
-    }
 
-    const onAddPostHandler = async (title, description, image) => {
-        
-
-        await savePost(title, description, image);
-        fetchPosts();
-    }
     
 
     return(
@@ -113,6 +125,13 @@ const FeedView = () => {
                     {/* Post de los carros con el boton eliminar */}
                     <div className={classes["feed-wrapper"]}>
                         <Post posts={posts} />
+                    </div>
+
+                    <div className={classes["line"]}>
+                    </div>
+
+                    <div className={classes["feed-wrapper"]}>
+                        <Post posts={postsHidden} />
                     </div>
                 
                 </>
