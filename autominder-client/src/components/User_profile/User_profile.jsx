@@ -36,7 +36,7 @@ const User_profile = () => {
 
                         <div>
                             <h2>Tipo de usuario dentro del sistema</h2>
-                            <p> Uusuario tipo: "{user.roles}" </p>
+                            <p> Usuario tipo: "{user.roles}" </p>
                         </div>
                     
                         </>

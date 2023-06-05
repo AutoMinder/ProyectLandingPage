@@ -4,14 +4,14 @@ import {BsFillCheckCircleFill} from 'react-icons/bs';
 import { useUserConext } from '../../../contexts/UserContext';
 import Button from '../../Button/Button';
 import { BsTrash } from 'react-icons/bs';
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { GrAddCircle } from 'react-icons/gr';
 import { toast } from 'react-toastify';
 
 
 
 
 
-const SinglePost = ({id='', car_name='', user='', onDeletePost = () => {}}) => {
+const SinglePost = ({id='', car_name='', user='',state = '', onDeletePost = () => {}}) => {
 
 
 
@@ -32,13 +32,43 @@ const SinglePost = ({id='', car_name='', user='', onDeletePost = () => {}}) => {
                 </a>
 
                 <h4>
-                    {user}
+                    Usuario: {user}
                 </h4>
+
+                <h5>
+                    {
+                    
+                        state.toString() == 'false'?
+                        <>
+                            <a className={classes['NoDele']}>
+                                Activo
+                            </a>
+                        </>:
+                        <>
+                            <a className={classes['Dele']}>
+                                Eliminado
+                            </a>
+                        </>
+                    
+                    }
+                </h5>
                     
                 <div className={classes['actions']}>
-                    <Button type="submit"> 
-                        <BsTrash /> Eliminar carro
-                    </Button>
+                    {
+                        
+                        state.toString() == 'false'?
+                        <>
+                             <Button type="submit"> 
+                                <BsTrash /> Eliminar carro
+                            </Button>
+                        </>:
+                        <>
+                            <Button type="submit"> 
+                                <GrAddCircle/> Restaurar carro
+                            </Button>
+                        </>
+                    
+                    }
                   
                 </div>
 
@@ -51,81 +81,7 @@ const SinglePost = ({id='', car_name='', user='', onDeletePost = () => {}}) => {
         
          
 
-        
-        
-        /*
-        <article className={classes['post']}>
-
-            <a>
-                {user}
-                
-                
-            </a>
-
-            <h4>
-                {title}
-            </h4>
-
-
-            <p>
-                {description}
-            </p>
-
-            <figure>
-                <img src={image} alt="Post Image" />
-            </figure>
-
-            <div>
-
-            
-
-            <div className={classes['actions']}>
-
-
-                <div>
-                    <BsFillChatRightTextFill /> Comentarios
-                </div>
-
-
-                <div>
-                    {
-                        user == 'admin'?
-                        
-                        <>
-                            <div>
-                                <BsFillCheckCircleFill /> Aprobar
-                            </div>
-
-                            <div>
-                                <AiFillCloseCircle /> Rechazar
-                            </div>
-
-                            <div>
-                                <BsTrash /> Eliminar post
-                            </div>
-                        
-                        </>:
-
-                        <>
-                            <div>
-                          
-                            </div>
-                        </>
-                    }
-                </div>
-
-                
-            </div>
-
-            </div>
-
-            <textarea name='description' rows={3}>
-
-            </textarea>
-
-        </article>
-
-        */
+    
 
         
     )
