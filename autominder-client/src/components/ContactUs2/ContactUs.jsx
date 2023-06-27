@@ -107,7 +107,7 @@ const ContactUs = () => {
           rights and licenses granted to you in these terms will end;
           (b) you must stop using the app, and (if needed) delete it
           from your device.
-        </p> <p className = {classes['Elements0']}><strong>Changes to This Terms and Conditions</strong></p> 
+        </p> <p className = {classes['Elements2']}><strong>Changes to This Terms and Conditions</strong></p> 
         <p className = {classes['Elements0']}>
           We may update our Terms and Conditions
           from time to time. Thus, you are advised to review this page
@@ -116,7 +116,7 @@ const ContactUs = () => {
           Conditions on this page.
         </p> <p className = {classes['Elements0']}>
           These terms and conditions are effective as of 2023-06-22
-        </p> <p className = {classes['Elements0']}><strong>Contact Us</strong></p> 
+        </p> <p className = {classes['Elements2']}><strong>Contact Us</strong></p> 
         <p className = {classes['Elements0']}>
           If you have any questions or suggestions about our
           Terms and Conditions, do not hesitate to contact us
