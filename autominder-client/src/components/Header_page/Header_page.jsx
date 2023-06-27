@@ -1,6 +1,6 @@
 import classes from './Header_page.module.scss';
 
-import logo from '../../assets/img/BuhoLogo.png';
+import logo from '../../assets/img/buhoFooter.png';
 import userImg from '../../assets/img/usuario-de-perfil.png';
 import Button2 from '../Button/Button';
 
