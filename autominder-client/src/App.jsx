@@ -13,6 +13,7 @@ import NotFoundView_v2 from './views/NotFoundView_v2/NotFoundView_v2';
 import AuthView from './views/AuthView/AuthView';
 import AdminView from './views/AdminView/AdminView';
 import ContactUs from './components/ContactUs/ContactUs';
+import ContactUs2 from './components/ContactUs2/ContactUs';
 import { useUserConext } from './contexts/UserContext';
 
 
@@ -37,7 +38,8 @@ function App() {
 
           <Route index element={<Welcome/>}/>
           <Route path="aboutus" element={<Aboutus/>}/>
-          <Route path="contactus" element={<ContactUs/>}/>
+          <Route path="privacy" element={<ContactUs/>}/>
+          <Route path="terms" element={<ContactUs2/>}/>
           <Route path="user_profile" element={<User_profile/>}/>
           <Route path="feed" element={<Feed_v2/>}/>
           <Route path="maps" element={<Maps/>}/>

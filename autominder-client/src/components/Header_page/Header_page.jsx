@@ -64,6 +64,15 @@ const Header = () => {
                 <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
                     Guía de uso
                 </p>
+               
+
+                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
+                    Privacy Policy
+                </p>
+
+                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
+                    Términos y condiciones
+                </p>
 
                 
                 
@@ -94,6 +103,14 @@ const Header = () => {
 
                 <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
                     Guía de uso
+                </p>
+
+                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
+                Privacy Policy
+                </p>
+
+                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
+                    Términos y condiciones
                 </p>
 
           

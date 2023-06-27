@@ -26,8 +26,9 @@ const Maps = () => {
             </figure>
 
             <figure className={classes['fluid']}>
-                <img src={v12i} alt="map" />
+                <img src={v2i} alt="map" />
             </figure>
+
 
             <figure className={classes['fluid']}>
                 <img src={v3i} alt="map" />
