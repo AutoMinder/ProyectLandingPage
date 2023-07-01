@@ -1,4 +1,4 @@
-import classes from './SinglePost.module.scss';
+import classes from './SinglePost2.module.scss';
 import {BsFillChatRightTextFill} from 'react-icons/bs';
 import {BsFillCheckCircleFill} from 'react-icons/bs';
 import { useUserConext } from '../../../contexts/UserContext';
@@ -11,7 +11,7 @@ import { toast } from 'react-toastify';
 
 
 
-const SinglePost = ({id='', car_name='', user='',state = '', onDeletePost = () => {}}) => {
+const SinglePost = ({id='', email='', username='',roles = '', onDeletePost = () => {}}) => {
 
 
 
@@ -28,25 +28,25 @@ const SinglePost = ({id='', car_name='', user='',state = '', onDeletePost = () =
         <form className={classes['row']} onSubmit={onSubmitDelete}>
             <article className={classes['post']}>
                 <a>
-                    {car_name}
+                    Usuario: {username}
                 </a>
 
                 <h4>
-                    Usuario: {user}
+                    email: {email}
                 </h4>
-
+                
                 <h5>
                     {
                     
-                        state.toString() == 'false'?
+                        roles.toString() == 'user'?
                         <>
                             <a className={classes['NoDele']}>
-                                Activo
+                                Usuario
                             </a>
                         </>:
                         <>
                             <a className={classes['Dele']}>
-                                Eliminado
+                                Administrador
                             </a>
                         </>
                     
@@ -56,15 +56,16 @@ const SinglePost = ({id='', car_name='', user='',state = '', onDeletePost = () =
                 <div className={classes['actions']}>
                     {
                         
-                        state.toString() == 'false'?
+                        roles.toString() == 'user'?
                         <>
-                             <Button type="submit" onClick="location.replace(https://autominder.tech/feed)"> 
-                                <BsTrash /> Eliminar carro
+                             <Button type="submit" onClick="location.replace(https://autominder.tech/feed2)"> 
+                                <BsTrash /> Hacer administrador
+                                
                             </Button>
                         </>:
                         <>
-                            <Button type="submit" onClick="location.replace(https://autominder.tech/feed)"> 
-                                <GrAddCircle/> Restaurar carro
+                            <Button type="submit" onClick="location.replace(https://autominder.tech/feed2)"> 
+                                <GrAddCircle/> Hacer usuario base
                             </Button>
                         </>
                     
@@ -75,13 +76,6 @@ const SinglePost = ({id='', car_name='', user='',state = '', onDeletePost = () =
             </article>
 
         </form>
-
-        
-
-        
-         
-
-    
 
         
     )

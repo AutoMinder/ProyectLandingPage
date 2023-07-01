@@ -49,85 +49,166 @@ const Header = () => {
 
 
             {
-                    !user ? 
-            <>
-            <div className = {classes['Div-elements']}>
-               
-                <p className = {classes['Elements']} onClick = { () => navigate("/")}>
-                    Acerca de la aplicación
-                </p>
+                !user || user.roles.toString() == 'user'?
+                    <>
+                        <div className = {classes['Div-elements']}>
+                                
+                                    <p className = {classes['Elements']} onClick = { () => navigate("/")}>
+                                        Acerca de la aplicación
+                                    </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
-                    Conoce sobre los desarrolladores
-                </p>
+                                    <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
+                                        Conoce sobre los desarrolladores
+                                    </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
-                    Guía de uso
-                </p>
-               
+                                    <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
+                                        Guía de uso
+                                    </p>
+                                
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
-                    Privacy Policy
-                </p>
+                                    <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
+                                        Privacy Policy
+                                    </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
-                    Términos y condiciones
-                </p>
+                                    <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
+                                        Términos y condiciones
+                                    </p>
 
-                
-                
-                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
+                                    
+                                    
+                                    <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
 
-                
-                    <figure className={classes['Icon-user']}>
+                                    
+                                        <figure className={classes['Icon-user']}>
 
-                        <img id="menu-icon" src={userImg} alt="user" />
+                                            <img id="menu-icon" src={userImg} alt="user" />
 
-                    </figure>
-                
+                                        </figure>
+                                    
 
 
-                </div>
-            </div>
-            </>:
-                      <div className = {classes['Div-elements']}>
-            
+                                    </div>
+                        </div>
+                    </>:
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/")}>
-                Acerca de la aplicación
-                </p>
+                user.roles.toString() == 'sys_admin'?
+                    <>
+                        <div className = {classes['Div-elements']}>
+                            
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
-                Conoce sobre los desarrolladores
-                </p>
+                                <p className = {classes['Elements']} onClick = { () => navigate("/")}>
+                                Acerca de la aplicación
+                                </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
-                    Guía de uso
-                </p>
+                                <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
+                                Conoce sobre los desarrolladores
+                                </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
-                Privacy Policy
-                </p>
+                                <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
+                                    Guía de uso
+                                </p>
 
-                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
-                    Términos y condiciones
-                </p>
+                                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
+                                Privacy Policy
+                                </p>
 
-          
-                <p className = {classes['Elements']} onClick = { () => navigate("/feed")}>
-                    Administrar carros de la cuenta
-                </p>
-             
+                                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
+                                    Términos y condiciones
+                                </p>
 
-        
-                
-                
-                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
+                                <p className = {classes['Elements']} onClick = { () => navigate("/feed2")}>
+                                    Administrar usuarios
+                                </p>
+                            
+                                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
 
-                    <img className={classes['menu-icon']} src={userImg} alt="user"  />                
-                
-                </div>
-            </div>
+                                    <img className={classes['menu-icon']} src={userImg} alt="user"  />                
+                                
+                                </div>
+                        </div>
+
+                    </>:
+                    
+                user.roles.toString() == 'admin'?
+                    <>
+                        <div className = {classes['Div-elements']}>
+                            
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/")}>
+                                Acerca de la aplicación
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
+                                Conoce sobre los desarrolladores
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
+                                    Guía de uso
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
+                                Privacy Policy
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
+                                    Términos y condiciones
+                                </p>
+
+                        
+                                <p className = {classes['Elements']} onClick = { () => navigate("/feed")}>
+                                    Administrar carros
+                                </p>
+                            
+                                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
+
+                                    <img className={classes['menu-icon']} src={userImg} alt="user"  />                
+                                
+                                </div>
+                        </div>
+                        
+                    </>:
+
+                    <>
+                        <div className = {classes['Div-elements']}>
+                                
+                                <p className = {classes['Elements']} onClick = { () => navigate("/")}>
+                                    Acerca de la aplicación
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/aboutus")}>
+                                    Conoce sobre los desarrolladores
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/maps")}>
+                                    Guía de uso
+                                </p>
+                            
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/privacy")}>
+                                    Privacy Policy
+                                </p>
+
+                                <p className = {classes['Elements']} onClick = { () => navigate("/terms")}>
+                                    Términos y condiciones
+                                </p>
+
+                                
+                                
+                                <div className = {classes['Elements']} onClick = { () => navigate("/user_profile")}>
+
+                                
+                                    <figure className={classes['Icon-user']}>
+
+                                        <img id="menu-icon" src={userImg} alt="user" />
+
+                                    </figure>
+                                
+
+
+                                </div>
+                        </div>
+                    </>
+                            
             }
 
             <div> 
@@ -148,7 +229,7 @@ const Header = () => {
                 <>
                 <Button className={classes['Button']} onClick = { () => { logout(); navigate("/")}}>
                     Log out
-                </Button >
+                </Button>
                 </>
 
                 }

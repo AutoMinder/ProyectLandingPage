@@ -9,6 +9,7 @@ import Aboutus from './components/Aboutus/Aboutus';
 import User_profile from './components/User_profile/User_profile';
 import Maps from './components/Maps/Maps';
 import Feed_v2 from './views/FeedView/FeedView';
+import Feed_v3 from './views/FeedView2/FeedView';
 import NotFoundView_v2 from './views/NotFoundView_v2/NotFoundView_v2';
 import AuthView from './views/AuthView/AuthView';
 import AdminView from './views/AdminView/AdminView';
@@ -42,6 +43,7 @@ function App() {
           <Route path="terms" element={<ContactUs2/>}/>
           <Route path="user_profile" element={<User_profile/>}/>
           <Route path="feed" element={<Feed_v2/>}/>
+          <Route path="feed2" element={<Feed_v3/>}/>
           <Route path="maps" element={<Maps/>}/>
           <Route path="*" element={<NotFoundView_v2/>}/>
 

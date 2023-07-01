@@ -19,7 +19,7 @@ function Navbar({open}) {
     <NavbarWrapper open={open}>
       
       {
-        !user ?
+        !user || user.roles.toString() == 'user'?
 
         <>
         <a href="#"  onClick = { () => { navigate("/")}}> Mi perfil</a>
@@ -31,16 +31,43 @@ function Navbar({open}) {
 
         </>:
 
+        user.roles.toString() == 'sys_admin'?
+        <>
+
+           
+        <a href="#" onClick = { () => navigate("/")} >Acerca de la aplicación </a>
+        <a href="#" onClick = { () => navigate("/aboutus")} > Conoce sobre los desarrolladores</a>
+        <a href="#"  onClick = { () => { navigate("/maps")}}> Guia de usuario</a>
+        <a href="#"  onClick = { () => { navigate("/user_profile")}}> Mi perfil</a>
+        <a href="#"  onClick = { () => { navigate("/privacy")}}>  Privacy Policy </a>
+        <a href="#"  onClick = { () => { navigate("/terms")}}> Términos y condiciones</a>
+        <a href="#"  onClick = { () => { navigate("/feed2")}}> Administrar usuarios</a>
+
+
+        </>:
+
+        
+        user.roles.toString() == 'admin'?
         <>
           
         <a href="#" onClick = { () => navigate("/")} >Acerca de la aplicación </a>
         <a href="#" onClick = { () => navigate("/aboutus")} > Conoce sobre los desarrolladores</a>
         <a href="#"  onClick = { () => { navigate("/maps")}}> Guia de usuario</a>
         <a href="#"  onClick = { () => { navigate("/user_profile")}}> Mi perfil</a>
-        <a href="#"  onClick = { () => { navigate("/feed")}}> Administrar carros de la cuenta</a>
+        <a href="#"  onClick = { () => { navigate("/privacy")}}>  Privacy Policy </a>
+        <a href="#"  onClick = { () => { navigate("/terms")}}> Términos y condiciones</a>
+        <a href="#"  onClick = { () => { navigate("/feed")}}> Administrar carros</a>
 
+        </>:
 
+        <>
+        <a href="#"  onClick = { () => { navigate("/")}}> Mi perfil</a>
+        <a href="#" onClick = { () => { navigate("/")}} >Acerca de la aplicación </a>
+        <a href="#" onClick = { () => { navigate("/aboutus")}} > Conoce sobre los desarrolladores</a>
+        <a href="#"  onClick = { () => { navigate("/user_profile")}}> Mi perfil</a>
+        <a href="#"  onClick = { () => { navigate("/maps")}}> Guia de usuario</a>
         </>
+      
       }
 
 

@@ -1,5 +1,5 @@
-import NewPostForm from "../../components/Feed_v2/NewPostForm/NewPostForm";
-import Post from "../../components/Feed_v2/Posts/Posts";
+import NewPostForm from "../../components/Feed_v3/NewPostForm/NewPostForm";
+import Post2 from "../../components/Feed_v3/Posts/Posts2";
 import { useConfigContext } from "../../contexts/ConfigContext";
 import NotFoundView_v2 from '../../views/NotFoundView_v2/NotFoundView_v2';
 
@@ -18,24 +18,25 @@ import { useUserConext } from "../../contexts/UserContext";
 
 
 const FeedView = () => {
-    const [posts, setPosts] = useState([]);
-    const [postsHidden, setPostsHidden] = useState([]);
+    const [users, setUsers] = useState([]);
+    const [useru, setUserU] = useState([]);
     const {startLoading, stopLoading} = useConfigContext();
     const {token, user} = useUserConext();
 
 
 
+
     useEffect(() => {fetchPosts()}, []);
-    useEffect(() => {fetchPostsHidden()}, []);
-    
+    useEffect(() => {fetchPostsU()}, []);
+
 
     const fetchPosts = async () => {
         try{
 
             startLoading();
 
-            const {data} = await axios.get('/post');
-            setPosts(data.posts);
+            const {data} = await axios.get('/auth/allusers');
+            setUsers(data.users);
             
     
         }catch(error){
@@ -46,13 +47,13 @@ const FeedView = () => {
 
     }
 
-    const fetchPostsHidden = async () => {
+    const fetchPostsU = async () => {
         try{
 
             startLoading();
 
-            const {data} = await axios.get('/post/hidden');
-            setPostsHidden(data.posts);
+            const {data} = await axios.get('/auth/allusersu');
+            setUserU(data.users);
             
     
         }catch(error){
@@ -63,24 +64,21 @@ const FeedView = () => {
 
     }
 
-    
 
-
-    
 
     return(
         <div className={classes["news-publish"]}>
-                    {/* Post de los carros con el boton eliminar */}
+                {/* Post de los usuarios con el boton eliminar */}
                     <div className={classes["feed-wrapper"]}>
-                        <Post posts={posts} />
+                        <Post2 users={users} />
                     </div>
 
                     <div className={classes["line"]}>
                     </div>
 
                     <div className={classes["feed-wrapper"]}>
-                        <Post posts={postsHidden} />
-                    </div>         
+                        <Post2 users={useru} />
+                    </div>          
         </div>
     )
 }

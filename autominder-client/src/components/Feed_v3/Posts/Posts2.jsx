@@ -1,4 +1,4 @@
-import SinglePost from '../SinglePost/SinglePost';
+import SinglePost2 from '../SinglePost/SinglePost2';
 
 
 import { useConfigContext } from "../../../contexts/ConfigContext";
@@ -8,10 +8,10 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 
-import classes from './Posts.module.scss';
+import classes from './Posts2.module.scss';
 
 
-const Post = ({posts = []}) => {
+const Post2 = ({users = []}) => {
 
     const {startLoading, stopLoading} = useConfigContext();
     const {token, user} = useUserConext();
@@ -23,8 +23,8 @@ const Post = ({posts = []}) => {
 
             startLoading();
             console.log(id)
-            await axios.patch(`/post/visibility/${id}`, {}, { headers: {authorization: `Bearer ${token}` }});       
-            toast.success('Post deleted');
+            await axios.patch(`/auth/updateusers/${id}`, {}, { headers: {authorization: `Bearer ${token}` }});       
+            toast.success('Usuario actualizado');
 
         }
         catch(error){
@@ -44,22 +44,22 @@ const Post = ({posts = []}) => {
 
     }
 
-    const onDeletePostHandler = async (id) => {
+    const onUpdateUserHandler = async (id) => {
         await deletePost(id.id);
     }
 
 
     
     
-    const mappedPosts = posts.map(post => {
+    const mappedPosts = users.map(user => {
             return(
-                <SinglePost
-                    key={post._id}
-                    id={post._id}
-                    car_name= {post.car_name}
-                    user = {post.user.username} 
-                    state = {post.hidden}
-                    onDeletePost={onDeletePostHandler}
+                <SinglePost2
+                    key={user._id}
+                    id={user._id}
+                    email = {user.email}
+                    username = {user.username}
+                    roles = {user.roles.toString()}
+                    onDeletePost={onUpdateUserHandler}
                 />
             );
         
@@ -72,10 +72,8 @@ const Post = ({posts = []}) => {
 
             
             <h3>
-                Administrar registros de carros
+                Administrar registros de usuarios
             </h3>
-
-
             
             <div className={classes["posts"]}>
                 {mappedPosts}                
@@ -88,4 +86,4 @@ const Post = ({posts = []}) => {
 };
 
 
-export default Post; 
+export default Post2; 
