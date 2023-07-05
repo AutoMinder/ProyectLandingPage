@@ -26,4 +26,9 @@
           background: $--dim-gray;
           cursor: not-allowed;
         }
+
+        a{
+          text-decoration: none;
+          color: $--white;
+        }
 }

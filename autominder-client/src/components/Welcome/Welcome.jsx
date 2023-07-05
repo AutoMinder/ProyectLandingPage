@@ -23,7 +23,7 @@ const Welcome = () => {
                     </p>
 
                     <Button2 className={classes['Button']}>
-                        Descarga ahora
+                        <a href="https://play.google.com/store/apps/details?id=com.autominder.autominder&hl=es_PY">Descargar ahora</a>
                     </Button2>
                 </div>
                         
@@ -89,6 +89,38 @@ const Welcome = () => {
                     </p>
                 </div>
                         
+                
+            </div>
+
+            <div className={classes['section2']}>
+
+                <div className={classes['centered-quote']}>
+                    
+                    <h3>Pulsa este botón para acceder a nuestra documentación de API completa y obtener toda la información necesaria para integrar con nuestra aplicación.</h3>
+                        
+                    <p>
+                    ¡Te esperamos allí para facilitar tu experiencia y sacar el máximo provecho de nuestra aplicación!
+                    </p>
+
+                    <Button2 className={classes['Button']}>
+                        <a href="https://ferapi.tech">Acceder la documentación</a>
+                    </Button2>
+                </div>
+
+                <div className={classes['centered-quote']}>
+                    
+                    <h3>Haz clic en este botón para acceder a nuestros repositorios de aplicación, donde encontrarás el código fuente, las actualizaciones más recientes y podrás colaborar con nosotros.</h3>
+                        
+                    <p>
+                    ¡Te invitamos a unirte a nuestra comunidad de desarrolladores y ser parte del futuro de nuestra aplicación!
+                    </p>
+
+                    <Button2 className={classes['Button']}>
+                        <a href="https://github.com/AutoMinder">Acceder a los repositorios</a>
+                    </Button2>
+                </div>
+                        
+    
                 
             </div>
 
